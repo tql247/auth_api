@@ -104,3 +104,8 @@ dist
 .tern-port
 /package-lock.json
 /yarn.lock
+/.idea/.gitignore
+/.idea/auth_api.iml
+/.idea/jsLibraryMappings.xml
+/.idea/modules.xml
+/.idea/vcs.xml

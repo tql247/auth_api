@@ -5,15 +5,13 @@ passport.use(
     'facebook',
     new FacebookStrategy(
         {
-            clientID: "161294699153731",
-            clientSecret: "1aae6feaac481109dcf9d81756cdf572",
+            clientID: "2919451708338120",
+            clientSecret: "5c8a12d77f56afe6cbe2895e2cb726c3",
             callbackURL: "/login/facebook/callback"
         },
-        (accessToken, refreshToken, profile, cb) => {
-            console.log('accessToken')
-            console.log('refreshToken')
-            console.log('profile')
-            console.log('cb')
+        (accessToken, refreshToken, profile, done) => {
+            //    do something
+            done(null)
         }
     )
 );

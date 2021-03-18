@@ -14,8 +14,7 @@ router.get(
         'google',
         {scope: ['profile']},
         function (req, res) {
-            console.log('req')
-            console.log('res')
+            //    do something
         }
     )
 )
@@ -34,24 +33,17 @@ router.get(
         'facebook',
         {scope: ['public_profile']},
         function (req, res) {
-            console.log('req')
-            console.log('res')
+        //    do something
         }
     )
 );
 
 router.get(
     '/facebook/callback',
-    facebook.authenticate(
-        'facebook',
-        { failureRedirect: '/login' },
-        function(req, res) {
-            // Successful authentication, redirect home.
-            console.log('req')
-            console.log('res')
-            res.redirect('/');
-        }
-    )
+    function(req, res) {
+        res.cookie('is_logged', true)
+        res.redirect('/')
+    }
 );
 
 

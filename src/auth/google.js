@@ -11,8 +11,7 @@ passport.use(
             callbackURL: '/login/google/callback'
         },
         accessToken => {
-            console.log('accessToken');
-            console.log(accessToken);
+            //    do something
         }
     ),
 );
